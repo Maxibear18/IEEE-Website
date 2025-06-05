@@ -1,0 +1,115 @@
+/* src/components/IeeeNsmPage.css */
+.ieee-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.ieee-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ieee-header h1 {
+  font-size: 2.5rem;
+  color: #00629B; /* IEEE blue */
+  margin-bottom: 0.5rem;
+}
+
+.ieee-header h2 {
+  font-size: 1.5rem;
+  color: #555;
+  font-weight: normal;
+}
+
+.mission-section {
+  margin-bottom: 2rem;
+}
+
+.mission-section h3 {
+  font-size: 1.3rem;
+  color: #00629B;
+  margin-bottom: 1rem;
+}
+
+.mission-section p {
+  line-height: 1.6;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 2rem 0;
+}
+
+.membership-form {
+  margin-bottom: 3rem;
+}
+
+.membership-form h3 {
+  font-size: 1.3rem;
+  color: #00629B;
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background-color: #00629B;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #004f7a;
+}
+
+.ieee-footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .ieee-container {
+    padding: 1rem;
+  }
+}
