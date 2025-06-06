@@ -14,7 +14,10 @@
 }
 
 .nav-title{
-  text-align: left;
+  margin: 0; /* Removes default margin */
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: white;
+  white-space: nowrap; /* Prevents text from wrapping */
 }
 
 .nav-container {
@@ -27,6 +30,12 @@
 
 .whitelogo{
   width: 70px;
+}
+
+.logo-title-group{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .nav-links {
@@ -70,8 +79,26 @@
 .footer {
   background-color: #004B96;
   color: white;
-  padding: 1rem;
+  padding: 2rem 1rem;
   text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Increased space between icons */
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.social-icon {
+  height: 35px; /* Smaller icon size */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Subtle hover effect */
 }
 
 /* Responsive Design (Mobile) */

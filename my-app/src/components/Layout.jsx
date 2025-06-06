@@ -1,18 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom"; // If using React Router
-import "./Layout.css"; // Import the CSS file
+import { Link } from "react-router-dom";
+import "./Layout.css";
 import whiteieee from '../images/white ieensm logo (1).png';
+import insta from '../images/Group 3.png';
+import linkedin from '../images/image 10.png';
+import discord from '../images/image 11.png';
 
 const Layout = ({ children }) => {
   return (
     <div className="layout-container">
       <nav className="navbar">
         <div className="nav-container">
-          {/* Logo */}
-          <Link to="/" className="nav-logo">
-            <img src={whiteieee} className="whitelogo" alt="logo"/>
-          </Link>
-          <h1 className="nav-title">IEEE-NSM</h1>
+          {/* Logo and Title Group */}
+          <div className="logo-title-group">
+            <Link to="/" className="nav-logo">
+              <img src={whiteieee} className="whitelogo" alt="logo"/>
+            </Link>
+            <h1 className="nav-title">IEEE-NSM</h1>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="nav-links">
@@ -35,9 +40,25 @@ const Layout = ({ children }) => {
         {children}
       </main>
 
-      {/* Footer (Optional) */}
+      {/* Footer with Social Icons */}
       <footer className="footer">
-        © 2023 MyApp. All rights reserved.
+        <div className="logo-title-group">
+            <Link to="/" className="nav-logo">
+              <img src={whiteieee} className="whitelogo" alt="logo"/>
+            </Link>
+            <h1 className="nav-title">IEEE-NSM</h1>
+          </div>
+        <div className="social-icons">
+          <a href="https://www.instagram.com/ieee_nsm/" target="_blank" rel="noopener noreferrer">
+            <img src={insta} alt="Instagram" className="social-icon" />
+          </a>
+          <a href="https://www.linkedin.com/company/ieee-nsm/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+            <img src={linkedin} alt="LinkedIn" className="social-icon" />
+          </a>
+          <a href="https://discord.gg/nXx9UtEeyy" target="_blank" rel="noopener noreferrer">
+            <img src={discord} alt="Discord" className="social-icon" />
+          </a>
+        </div>
       </footer>
     </div>
   );

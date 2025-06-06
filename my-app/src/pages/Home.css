@@ -1,68 +1,192 @@
-/* src/components/IeeeNsmPage.css */
-.ieee-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-family: 'Arial', sans-serif;
-  color: #333;
+/* Home.css */
+.home-container {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-.ieee-header {
+/* Hero Banner Styles */
+.hero-banner {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
   text-align: center;
-  margin-bottom: 2rem;
 }
 
-.ieee-header h1 {
-  font-size: 2.5rem;
-  color: #00629B; /* IEEE blue */
-  margin-bottom: 0.5rem;
+.banner-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
-.ieee-header h2 {
-  font-size: 1.5rem;
-  color: #555;
-  font-weight: normal;
+.banner-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
-.mission-section {
-  margin-bottom: 2rem;
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 0 20px;
+  max-width: 800px;
 }
 
-.mission-section h3 {
-  font-size: 1.3rem;
-  color: #00629B;
+.hero-content h1 {
+  font-size: 3.5rem;
   margin-bottom: 1rem;
 }
 
-.mission-section p {
-  line-height: 1.6;
+.hero-content h2 {
+  font-size: 1.8rem;
+  font-weight: normal;
 }
 
-.divider {
-  height: 1px;
-  background-color: #ddd;
-  margin: 2rem 0;
+/* Mission Section */
+.mission-section {
+  display: flex;
+  min-height: 500px;
+  position: relative; /* Add this for button positioning */
+  padding-bottom: 80px; /* Make space for the button */
 }
 
-.membership-form {
-  margin-bottom: 3rem;
+.mission-content {
+  flex: 1;
+  padding: 4rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.membership-form h3 {
-  font-size: 1.3rem;
+.mission-content h3 {
+  font-size: 2rem;
   color: #00629B;
   margin-bottom: 1.5rem;
 }
 
+.mission-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.mission-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-image img {
+  width: 70%; /* Adjust width as needed */
+  height: auto;
+  max-height: 400px;
+  object-fit: contain; /* Changed from cover to contain to show full image */
+  border-radius: 15px; /* Add border radius */
+}
+
+.mission-section button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #00629B;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mission-section button:hover {
+  background-color: #004f7a;
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Members Section */
+.members-section {
+  display: flex;
+  min-height: 500px;
+  flex-direction: row-reverse;
+}
+
+.members-content {
+  flex: 1;
+  padding: 4rem;
+  background-color: #00629B;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.members-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.members-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.members-image {
+  flex: 1;
+  position: relative;
+}
+
+.members-image img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+/* Image Overlay */
+.image-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Membership Form */
+.membership-form {
+  padding: 4rem;
+  background-color: #3385AD;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.membership-form h3 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .form-row {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group {
   flex: 1;
-  margin-bottom: 1rem;
 }
 
 .form-group label {
@@ -83,33 +207,41 @@
 .submit-btn {
   background-color: #00629B;
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 2rem;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  align-self: flex-end;
 }
 
 .submit-btn:hover {
   background-color: #004f7a;
 }
 
-.ieee-footer {
-  text-align: center;
-  margin-top: 2rem;
-  color: #666;
-  font-size: 1rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-section,
+  .members-section {
+    flex-direction: column;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .mission-content,
+  .members-content {
+    padding: 2rem;
+  }
+  
   .form-row {
     flex-direction: column;
     gap: 0;
-  }
-  
-  .ieee-container {
-    padding: 1rem;
   }
 }
