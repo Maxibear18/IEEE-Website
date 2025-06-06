@@ -11,6 +11,7 @@
   color: white;
   padding: 1rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  
 }
 
 .nav-title{
@@ -80,15 +81,20 @@
   background-color: #004B96;
   color: white;
   padding: 2rem 1rem;
-  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .social-icons {
   display: flex;
-  justify-content: center;
   gap: 1rem; /* Increased space between icons */
-  margin: 0 auto;
-  max-width: 400px;
 }
 
 .social-icon {

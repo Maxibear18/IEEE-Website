@@ -42,24 +42,26 @@ const Layout = ({ children }) => {
 
       {/* Footer with Social Icons */}
       <footer className="footer">
-        <div className="logo-title-group">
-            <Link to="/" className="nav-logo">
-              <img src={whiteieee} className="whitelogo" alt="logo"/>
-            </Link>
-            <h1 className="nav-title">IEEE-NSM</h1>
-          </div>
-        <div className="social-icons">
-          <a href="https://www.instagram.com/ieee_nsm/" target="_blank" rel="noopener noreferrer">
-            <img src={insta} alt="Instagram" className="social-icon" />
-          </a>
-          <a href="https://www.linkedin.com/company/ieee-nsm/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
-            <img src={linkedin} alt="LinkedIn" className="social-icon" />
-          </a>
-          <a href="https://discord.gg/nXx9UtEeyy" target="_blank" rel="noopener noreferrer">
-            <img src={discord} alt="Discord" className="social-icon" />
-          </a>
-        </div>
-      </footer>
+  <div className="footer-content">
+    <div className="logo-title-group">
+      <Link to="/" className="nav-logo">
+        <img src={whiteieee} className="whitelogo" alt="logo"/>
+      </Link>
+      <h1 className="nav-title">IEEE-NSM</h1>
+    </div>
+    <div className="social-icons">
+      <a href="https://www.instagram.com/ieee_nsm/" target="_blank" rel="noopener noreferrer">
+        <img src={insta} alt="Instagram" className="social-icon" />
+      </a>
+      <a href="https://www.linkedin.com/company/ieee-nsm/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+        <img src={linkedin} alt="LinkedIn" className="social-icon" />
+      </a>
+      <a href="https://discord.gg/nXx9UtEeyy" target="_blank" rel="noopener noreferrer">
+        <img src={discord} alt="Discord" className="social-icon" />
+      </a>
+    </div>
+  </div>
+</footer>
     </div>
   );
 };
