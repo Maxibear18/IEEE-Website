@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Gloock&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans+Mono:wdth,wght@75,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
 /* Home.css */
 .home-container {
   max-width: 100%;
@@ -16,6 +19,8 @@
   justify-content: center;
   color: white;
   text-align: center;
+  font-family: "Gloock", serif;
+  font-style: normal;
 }
 
 .banner-image {
@@ -185,10 +190,12 @@
   display: flex;
   gap: 2rem;
   margin-bottom: 1.5rem;
+  flex-direction: column;
 }
 
 .form-group {
   flex: 1;
+  margin-bottom: 1rem;
 }
 
 .form-group label {
@@ -204,6 +211,7 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
+  background-color: white;
 }
 
 .submit-btn {

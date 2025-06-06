@@ -5,6 +5,7 @@ import banner from '../images/ieee nsm banner (1).png';
 import olivia from '../images/Olivia holding image (1).png';
 import friends from '../images/smiling friends (1).png';
 
+
 function Home() {
   return (
     <Layout>
@@ -14,8 +15,8 @@ function Home() {
           <div className="banner-overlay"></div>
           <img src={banner} alt="IEEE Banner" className="banner-image" />
           <div className="hero-content">
-            <h1>IEEE-NSM</h1>
-            <h2>Institute of Electrical and Electronics Engineers</h2>
+            <h1>Institute of Electrical and Electronics Engineers</h1>
+            <p>University of Houston</p>
           </div>
         </div>
 
