@@ -64,9 +64,9 @@ function Home() {
           <button>Become a Member</button>
         </section>
         {/*Events Section*/}
-        <section>
+        <section class="events-section">
           <h1>Don't Miss Out on Our Upcoming Events</h1>
-          <div style={{height: '500px'}}>
+          <div class="calendar-container">
             <Calendar
               localizer={localizer}
               events={events}

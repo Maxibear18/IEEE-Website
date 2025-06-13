@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
           {/* Desktop Navigation */}
           <div className="nav-links">
             <Link to="/" className="nav-link">Home</Link>
-            <Link to="/about" className="nav-link">About</Link>
+            <Link to="/officers" className="nav-link">Officers</Link>
           </div>
 
           {/* Mobile Menu Button (Hamburger) */}
