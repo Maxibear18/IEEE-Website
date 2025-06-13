@@ -77,7 +77,7 @@
 /* Main Content */
 .main-content {
   flex-grow: 1;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0rem;
 }
@@ -121,5 +121,34 @@
 
   .mobile-menu-btn {
     display: block; /* Show hamburger menu */
+  }
+}
+
+@media (min-width: 1440px){
+  .nav-container{
+    max-width: 1400px;
+    padding: 0 2rem;
+  }
+  .nav-title {
+    font-size: 1.8rem;
+  }
+
+  .whitelogo {
+    width: 80px;
+  }
+
+  .nav-links {
+    gap: 2rem;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+  }
+  .footer-content {
+    max-width: 1400px;
+  }
+
+  .social-icon {
+    height: 40px;
   }
 }
