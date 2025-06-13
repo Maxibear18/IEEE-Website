@@ -19,6 +19,13 @@
   justify-content: center;
   color: white;
   text-align: center;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.hero-banner p{
   font-family: "Gloock", serif;
   font-style: normal;
 }
@@ -184,6 +191,10 @@
   color: white;
   margin-bottom: 2rem;
   text-align: center;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .form-row {
@@ -196,6 +207,18 @@
 .form-group {
   flex: 1;
   margin-bottom: 1rem;
+}
+
+.form-group textarea{
+   width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit; /* Match your body font */
+  min-height: 120px; /* Minimum height */
+  resize: vertical; /* Allow only vertical resizing */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .form-group label {
@@ -223,7 +246,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
-  align-self: flex-end;
+  align-self: center;
 }
 
 .submit-btn:hover {

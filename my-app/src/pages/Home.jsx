@@ -1,13 +1,39 @@
 import React from 'react';
 import './Home.css';
+import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
+import format from 'date-fns/format';
+import parse from 'date-fns/parse';
+import startOfWeek from 'date-fns/startOfWeek';
+import getDay from 'date-fns/getDay';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
 import Layout from '../components/Layout';
 import banner from '../images/ieee nsm banner (1).png';
 import olivia from '../images/Olivia holding image (1).png';
 import friends from '../images/smiling friends (1).png';
 
+const locales = {
+  'en-US': require('date-fns/locale/en-US'),
+};
+
+const localizer = dateFnsLocalizer({
+  format,
+  parse,
+  startOfWeek,
+  getDay,
+  locales,
+});
+
+const events = [
+  {
+    title: 'Meeting',
+    start: new Date(2025, 6, 15, 10, 0), // month is 0-indexed (10 = November)
+    end: new Date(2025, 6, 15, 12, 0),
+  },
+];
 
 function Home() {
   return (
+    
     <Layout>
       <div className="home-container">
         {/* Hero Banner with Dark Overlay */}
@@ -15,8 +41,9 @@ function Home() {
           <div className="banner-overlay"></div>
           <img src={banner} alt="IEEE Banner" className="banner-image" />
           <div className="hero-content">
-            <h1>Institute of Electrical and Electronics Engineers</h1>
             <p>University of Houston</p>
+            <h1>Institute of Electrical and Electronics Engineers</h1>
+            
           </div>
         </div>
 
@@ -35,6 +62,20 @@ function Home() {
             <img src={olivia} alt="IEEE Member" />
           </div>
           <button>Become a Member</button>
+        </section>
+        {/*Events Section*/}
+        <section>
+          <h1>Don't Miss Out on Our Upcoming Events</h1>
+          <div style={{height: '500px'}}>
+            <Calendar
+              localizer={localizer}
+              events={events}
+              startAccessor="start"
+              endAccessor="end"
+              views={['month', 'week', 'day']}
+              defaultView="month"
+            />
+          </div>
         </section>
         {/* Membership Form */}
         <section className="membership-form">
@@ -56,10 +97,17 @@ function Home() {
                 <label htmlFor="role">I am...</label>
                 <select id="role">
                   <option value="">Select...</option>
-                  <option value="student">Student</option>
-                  <option value="professional">Professional</option>
-                  <option value="faculty">Faculty</option>
+                  <option value="student">A Student</option>
+                  <option value="professional">An Alum</option>
+                  <option value="faculty">A Sponsor</option>
+                  <option value="representative">A Company Representative</option>
                 </select>
+              </div>
+              <div className="form-group">
+                <label>Message</label>
+                <textarea>
+
+                </textarea>
               </div>
               <button type="submit" className="submit-btn">Send</button>
             </div>
